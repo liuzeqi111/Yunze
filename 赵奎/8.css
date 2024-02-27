@@ -1,0 +1,55 @@
+.eight .container {
+    width: 100%;
+    height: 590px;
+    background-color: #EFEFEF;
+    border-top: 2px solid #999;
+    font-size: 20px;
+}
+
+.high {
+    width: 400px;
+    height: 150px;
+    margin-left: 40%;
+    margin-top: 65px;
+}
+
+.high input {
+    margin-top: 20px;
+    padding: 2px;
+}
+
+.low {
+    margin-left: 40%;
+    margin-top: 30px;
+}
+
+.low input {
+    padding-top: 0;
+    padding-bottom: 60px;
+}
+
+.btn {
+    width: 400px;
+    height: 76px;
+    margin-left: 38%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    width: 150px;
+    height: 76px;
+    line-height: 76px;
+    text-align: center;
+    background-color: #CCCACA;
+    border-radius: 38px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.5s;
+}
+
+a:hover {
+    background-color: #999;
+}
