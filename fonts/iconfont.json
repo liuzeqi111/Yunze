@@ -1,0 +1,23 @@
+{
+  "id": "4440221",
+  "name": "云泽项目",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "201560",
+      "name": "喇叭",
+      "font_class": "laba",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "8519511",
+      "name": "新闻",
+      "font_class": "xinwen",
+      "unicode": "e6fc",
+      "unicode_decimal": 59132
+    }
+  ]
+}

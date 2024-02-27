@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+    width: 1900px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 1920px;
+    height: 167px;
+    background-color: #fff;
+}
+
+.header img {
+    margin-left: 60px;
+    margin-top: 46px;
+    width: 100px;
+    height: 80px;
+}
+
+.text {
+    position: absolute;
+    top: 66px;
+    left: 182px;
+    font-size: 24px;
+}
+
+.access {
+    position: absolute;
+    top: 44px;
+    left: 472px;
+    width: 162px;
+    height: 75px;
+    border-radius: 40px;
+    background-color: #E3E3E3;
+    font-size: 20px;
+    text-align: center;
+    line-height: 75px;
+}
+
+.nav {
+    position: absolute;
+    top: 1px;
+    right: 80px;
+    width: 472px;
+    height: 110px;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+}
+
+.box1,.box2,.box3,.box4 {
+    width: 118px;
+    height: 167px;
+    text-align: center;
+    line-height: 167px;
+}
+
+.inner {
+    width: 1920px;
+    height: 590px;
+    background-color: #EFEFEF;
+    border-top: 2px solid #999;
+    display: flex;
+}
+
+.left {
+    width: 800px;
+    height: 590px;
+    background-color: #EFEFEF;
+    border-right: 2px solid #999;
+}
+
+.left i {
+    position: relative;
+    top: 30px;
+    margin-left: 16px;
+}
+
+.left strong {
+    position: relative;
+    top: 20px;
+    left: 4px;
+    font-size: 20px;
+}
+
+.left img {
+    width: 452px;
+    height: 400px;
+}
+
+.focus {
+    position: relative;
+    top: 60px;
+    left: 120px;
+    width: 500px;
+    height: 430px;
+    overflow: hidden;
+}
+
+.focus ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+}
+
+.focus ul li {
+    float: left;
+}
+
+.focus img {
+    width: 500px;
+    height: 430px;
+}
+
+.btn-l,
+.btn-r {
+    display: none;
+    position: absolute;
+    top: 170px;
+    width: 24px;
+    height: 34px;
+    background-color: rgba(0,0,0,.5);
+    text-align: center;
+    line-height: 34px;
+    color: #fff;
+    font-family: 'icomoon';
+    font-size: 18px;
+    z-index: 2;
+}
+
+.btn-r {
+    left: 476px;
+}
+
+.horn {
+    position: relative;
+    top: 22px;
+    left: 16px;
+}
+
+.right strong {
+    position: relative;
+    left: 18px;
+    top: 10px;
+    font-size: 20px;
+}
+
+.footer {
+    position: relative;
+    width: 1920px;
+    height: 80px;
+    background-color: #fff;
+}
+
+.logo {
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.information {
+    position: absolute;
+    top: 40px;
+    left: 200px;
+    height: 100px;
+    width: 700px;
+    font-size: 20px;
+}
+
+.pic1 {
+    float: right;
+    margin-top: 40px;
+    margin-right: 180px;
+}
+
+.pic2 {
+    float: right;
+    margin-top: 40px;
+    margin-right: 80px;
+}

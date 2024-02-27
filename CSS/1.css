@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+    width: 1900px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 1920px;
+    height: 148px;
+    background-color: #fff;
+}
+
+.header img {
+    margin-left: 60px;
+    margin-top: 30px;
+    width: 100px;
+    height: 80px;
+}
+
+.text {
+    position: absolute;
+    top: 54px;
+    left: 180px;
+    font-size: 24px;
+}
+
+.btn {
+    position: absolute;
+    top: 46px;
+    right: 140px;
+    width: 162px;
+    height: 66px;
+    background-color: #D2DEE9;
+    border-radius: 40px;
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+    line-height: 66px;
+}
+
+.inner {
+    width: 1920px;
+    height: 590px;
+    background-color: #EFEFEF;
+    border-top: 2px solid #999;
+}
+
+.manager {
+    position: relative;
+    top: 54px;
+    left: 380px;
+    width: 340px;
+    height: 390px;
+    background-color: #fff;
+    font-size: 30px;
+    color: #74C2E4;
+}
+
+.inner .access {
+    position: relative;
+    top: 56px;
+    left: 90px;
+}
+
+.inner img {
+    margin-top: 86px;
+    margin-left: 24px;
+    width: 300px;
+    height: 231px;
+}
+
+.student {
+    position: absolute;
+    top: 54px;
+    right: 460px;
+    width: 340px;
+    height: 390px;
+    background-color: #fff;
+    font-size: 30px;
+    color: #74C2E4;
+}
+
+.footer {
+    position: relative;
+    width: 1920px;
+    height: 80px;
+    background-color: #fff;
+}
+
+.logo {
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.information {
+    position: absolute;
+    top: 40px;
+    left: 200px;
+    height: 100px;
+    width: 700px;
+    font-size: 20px;
+}
+
+.pic1 {
+    float: right;
+    margin-top: 40px;
+    margin-right: 180px;
+}
+
+.pic2 {
+    float: right;
+    margin-top: 40px;
+    margin-right: 80px;
+}
