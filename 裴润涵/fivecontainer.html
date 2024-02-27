@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fourcontainer.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .w {
+        width: 1916px;
+        margin: auto;
+    }
+
+    .muban {
+        height: 1084px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .header {
+        position: relative;
+        height: 167px;
+        background-color: #fff;
+    }
+
+    .header img {
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+        left: 23px;
+    }
+
+    .header span {
+        position: absolute;
+        top: 50%;
+        margin-top: -12px;
+        left: 160px;
+    }
+
+    .bottom {
+        height: 237px;
+        background-color: #fff;
+        position: relative;
+    }
+
+    .bottom img {
+        position: absolute;
+        top: 50%;
+        margin-top: -50px;
+    }
+
+    .bottom .information {
+        position: absolute;
+        top: 60px;
+        left: 200px;
+        height: 100px;
+        width: 700px;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <div class="muban w">
+        <div class="header w">
+            <img src="https://liuzeqi001.oss-cn-beijing.aliyuncs.com/IMG_2954(20240220-103719)%202%20(1).png" />
+            <span class="text"><strong>云顶书院学生管理系统</strong></span>
+        </div>
+        <div class="fourcontainer w">
+            <div style="position: absolute; font-size: 77px; top: 40px; left: 544px;">注册：</div>
+            <div class="ID">
+                <ul>
+                    <li>账号:<input type="text" value="工号/学号" class="id"></li>
+                    <li style="top: 270px;">密码:<input type="text" value="密码" class="pass"></li>
+                    <li style="top: 376px;">密码:<input type="text" value="再次输入" class="passagain"></li>
+                </ul>
+            </div>
+
+            <div style="font-size: 29px; text-align: center; line-height: 1000px;"><a href="#">忘记密码</a> | <a
+                    href="#">联系我们</a></div>
+            <button display="block"
+                style="background-color: #fff; width: 255px; height: 141px; font-size: 77px; border-radius: 50px; position: absolute; left: 1480px; top: 233px; text-align: center; line-height: 136px; border: 0;">确认</button>
+            <div class="photo">
+                <ul>
+                    <li>
+                        <div><img
+                                src="https://peirunhan.oss-cn-beijing.aliyuncs.com/%E8%BF%94%E5%9B%9E.png">
+                        </div>返回
+                    </li>
+                    <li>
+                        <div><img src="https://peirunhan.oss-cn-beijing.aliyuncs.com/icon_%E6%89%8B%E6%9C%BA%E5%8F%B7_%E7%99%BB%E5%BD%95.png"
+                                style="left:282px;"></div>手机注册
+                    </li>
+                    <li>
+                        <div><img src="https://peirunhan.oss-cn-beijing.aliyuncs.com/%E6%9B%B4%E5%A4%9A.png"
+                                style="left: 546px;"></div>更多
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="bottom w">
+            <img src="https://liuzeqi001.oss-cn-beijing.aliyuncs.com/IMG_2954(20240220-103719)%202%20(1).png"
+                style="left:23px;">
+            <img src="https://liuzeqi001.oss-cn-beijing.aliyuncs.com/Rectangle%2077.png" class="pic1"
+                style="right: 200px;">
+            <img src="https://liuzeqi001.oss-cn-beijing.aliyuncs.com/Rectangle%2078.png" class="pic2"
+                style="right: 358px;">
+            <div class="information">
+                <strong>联系电话： 123 3456 4567</strong> &nbsp; | &nbsp; <strong>邮箱：12334563456@qq.com</strong> <br />
+                <br />
+                <strong>地址：太原理工大学明向校区</strong>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
+    <script>
+        var id=document.querySelector('.id');
+        var pass=document.querySelector('.pass');
+        var passagain=document.querySelector('.passagain');
+        var btn=document.querySelector('button');
+        function Checkpass(str){
+            var reg = /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[`~!@#$%^&*()_+<>?:"{},.\/\\;'[\]]).*$/;
+            if(reg.test(str)){
+                
+            }
+            else{
+                alert('密码格式错误，请重新输入');
+            }
+        }
+        id.onfocus=function(){
+            if(id.value=='工号/学号'){
+                id.value='';
+            }
+            
+        }
+        id.onblur=function(){
+            if(!id.value){
+                id.value='工号/学号'
+            }
+            alert('密码最少六位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符');
+        }
+        pass.onfocus = function(){
+            if(pass.value=='密码'){
+                pass.value= '';
+                pass.type='password';
+            }
+            
+        }
+        pass.onblur = function(){
+            if(!pass.value){
+                pass.type='text';
+                pass.value='密码';
+            }
+            else{
+                Checkpass(pass.value);
+            }
+        }
+        passagain.onfocus = function () {
+                if (passagain.value == '再次输入') {
+                    passagain.value = '';
+                    passagain.type = 'password';
+                }
+            }
+        passagain.onblur = function () {
+                if (!passagain.value) {
+                    passagain.type = 'text';
+                    passagain.value = '再次输入';
+                }
+                else if(passagain.value!=pass.value){
+                    alert('两次密码不同，请重新输入');
+                }
+            }
+        btn.onclick=function(){
+            if(id.value=='工号/学号'||pass.value=='密码'||passagain.value=='再次输入'){
+                alert('账号或密码不符合规范');
+            }
+            else{
+                let data={
+                    "name":id.value,
+                    "password":pass.value
+                }
+                axios.post('http://192.168.148.13:9000',data)
+                    .then((res)=>{
+                        console.log(res);
+                    })
+            }
+        }
+    </script>
+</body>
+
+</html>
