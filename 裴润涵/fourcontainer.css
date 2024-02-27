@@ -1,0 +1,51 @@
+.fourcontainer {
+    height: 680px;
+    background-color: #EFEFEF;
+    position: relative;
+    font-weight: 700;
+}
+.fourcontainer .ID ul li{
+    display: block;
+    width: 638px;
+    height: 66px;
+    font-size: 58px;
+    background-color: #FFFF;
+    position: absolute;
+    top: 163px;
+    left: 662px;
+    padding-bottom: 15px;
+}
+.fourcontainer .ID ul li input{
+    height: 50px;
+    width: 467px;
+    border: none;
+    font-size: 29px;
+    font-weight: 700;
+    margin-left: 28px;
+    color: #BABABA;
+}
+.fourcontainer .photo ul{
+    position: absolute;
+    display: flex;
+    top: 540px;
+    left: 670px;
+    width: 620px;
+    justify-content: space-between;
+}
+.fourcontainer .photo ul li{
+    width: 89px;
+    height: 104px;
+    text-align: center;
+}
+.fourcontainer .photo ul li div{
+    background-color: #d9d9d9;
+    width: 89px;
+    height: 89px;
+    border-radius: 50%;
+}
+.fourcontainer .photo ul li div img{
+    width: 60px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
