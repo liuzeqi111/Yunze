@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
     var ul = document.querySelector('.img');
     var ol = document.querySelector('.circle');
     var num = 0;
-    // 鼠标经过就隐藏左右按钮
+
     focus.addEventListener('mouseenter', function () {
         btn_l.style.display = 'block';
         btn_r.style.display = 'block';

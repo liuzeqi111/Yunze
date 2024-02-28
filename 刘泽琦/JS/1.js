@@ -3,7 +3,6 @@ window.addEventListener('load', function () {
 
     for (var i = 0; i < cube.length; i++) {
         cube[i].onclick = function () {
-            // alert(111);
             for (var i = 0; i < cube.length; i++) {
             cube[i].style.border = '';
         }

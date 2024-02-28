@@ -3,67 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="fourcontainer.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../fourcontainer.css">
+    <!-- <link rel="stylesheet" href="../CSS/login.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>云顶书院学生管理系统</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.w {
+    width: 1916px;
+    margin: auto;
+}
+
+.muban {
+    height: 1084px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    position: relative;
+    height: 167px;
+    background-color: #fff;
+}
+
+.header img {
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 23px;
+}
+
+.header span {
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    left: 160px;
+}
+
+.bottom {
+    height: 237px;
+    background-color: #fff;
+    position: relative;
+}
+
+.bottom img {
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+}
+
+.bottom .information {
+    position: absolute;
+    top: 60px;
+    left: 200px;
+    height: 100px;
+    width: 700px;
+    font-size: 20px;
+}
+    </style>
 </head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    ul{
-        list-style: none;
-    }
-    a{
-        text-decoration: none;
-        color:inherit;
-    }
-    .w{
-        width: 1916px;
-        margin: auto;
-    }
-    .muban{
-        height: 1084px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .header{
-        position: relative;
-        height: 167px;
-        background-color: #fff;
-    }
-    .header img{
-        position: absolute;
-        top: 50%;
-        margin-top: -50px;
-        left: 23px;
-    }
-    .header span{
-        position: absolute;
-        top: 50%;
-        margin-top: -12px;
-        left: 160px;
-    }
-    .bottom{
-        height: 237px;
-        background-color: #fff;
-        position: relative;
-    }
-    .bottom img{
-        position: absolute;
-        top: 50%;
-        margin-top: -50px;
-    }
-    .bottom .information {
-        position: absolute;
-        top: 60px;
-        left: 200px;
-        height: 100px;
-        width: 700px;
-        font-size: 20px;
-    }
-</style>
 <body>
     <div class="muban w">
         <div class="header w">
@@ -85,7 +97,7 @@
                 <ul>
                     <li><div><img src="https://peirunhan.oss-cn-beijing.aliyuncs.com/icon_%E6%89%8B%E6%9C%BA%E5%8F%B7_%E7%99%BB%E5%BD%95.png" ></div>手机号登录</li>
                     <li><div><img src="https://peirunhan.oss-cn-beijing.aliyuncs.com/%E4%B8%AA%E4%BA%BA.png " style="left:282px;"></div>其他方式</li>
-                    <a href="fivecontainer.html" target="_blank"><li><div><img src="https://peirunhan.oss-cn-beijing.aliyuncs.com/%E5%8A%A0%E5%8F%B7%20(1).png" style="left: 546px;"></div>注册</li></a>
+                    <a href="register.html"><li><div><img src="https://peirunhan.oss-cn-beijing.aliyuncs.com/%E5%8A%A0%E5%8F%B7%20(1).png" style="left: 546px;"></div>注册</li></a>
                 </ul>
             </div>
             
