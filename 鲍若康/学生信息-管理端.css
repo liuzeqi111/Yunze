@@ -24,7 +24,7 @@
 
 .group-1 {
     font-size: 50px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:  Courier, monospace;
     font-weight: bold;
     line-height: 123px;
 }
@@ -34,7 +34,7 @@
     height: 123px;
     border-radius: 100%;
     background-color: #FFFFFF;
-    font: bold 40px 'Courier New', Courier, monospace;
+    font: bold 40px  Courier, monospace;
     color: #74C2E4;
     line-height: 123px;
     text-align: center;
@@ -45,7 +45,7 @@
     height: 123px;
     border-radius: 100%;
     background-color: #A09F9F;
-    font: bold 40px 'Courier New', Courier, monospace;
+    font: bold 40px Courier, monospace;
     color: #74C2E4;
     line-height: 123px;
     text-align: center;
@@ -56,7 +56,7 @@
     height: 123px;
     border-radius: 100%;
     background-color: #100101;
-    font: bold 40px 'Courier New', Courier, monospace;
+    font: bold 40px Courier, monospace;
     color: #74C2E4;
     line-height: 123px;
     text-align: center;
@@ -70,7 +70,7 @@
     left: 33%;
     line-height: 83px;
     text-align: center;
-    font: bold 50px 'Courier New', Courier, monospace;
+    font: bold 50px ，Courier, monospace;
 }
 
 input {
@@ -89,7 +89,7 @@ button {
     height: 120px;
     top: 430px;
     left: 48%;
-    font: bold 50px 'Courier New', Courier, monospace;
+    font: bold 50px  Courier, monospace;
     background-color: #ffffff;
     border: none;
     border-radius: 10%;
@@ -109,7 +109,7 @@ button:hover {
 }
 
 .index {
-    content: "";
+    content: ""; 
     width: 15px;
     height: 15px;
     position: absolute;
@@ -122,5 +122,4 @@ button:hover {
 
 .index:hover {
     cursor: pointer;
-
 }

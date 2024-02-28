@@ -58,6 +58,11 @@ a {
     font-size: 20px;
 }
 
+.nav :hover {
+    cursor: pointer;
+    background: linear-gradient(to bottom, #DEDDDD, #FBFAFA);
+}
+
 .box1,
 .box2,
 .box3,
@@ -66,6 +71,7 @@ a {
     height: 167px;
     text-align: center;
     line-height: 167px;
+    margin-left: 10px;
 }
 
 .inner {
