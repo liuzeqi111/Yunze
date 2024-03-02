@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .w {
+            width: 1916px;
+            margin: auto;
+        }
+
+        .muban {
+            height: 1084px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .header {
+            position: relative;
+            height: 167px;
+            background-color: #fff;
+        }
+
+        .header img {
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+            left: 23px;
+        }
+
+        .header span {
+            position: absolute;
+            top: 50%;
+            margin-top: -12px;
+            left: 160px;
+            font-size: 24px;
+        }
+        .header div {
+            position: absolute;
+            width: 161px;
+            height: 75px;
+            background-color: #E3E3E3;
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            line-height: 75px;
+            border-radius: 75px;
+            top: 25%;
+            left: 450px;
+        }
+        .header ul {
+            display: flex;
+            position: absolute;
+            right: 20px;
+        }
+        .header ul li {
+            font-weight: 700;
+            display: block;
+            width: 118px;
+            height: 167px;
+            background-color: #fff;
+            text-align: center;
+            margin-left: 10px;
+            line-height: 167px;
+            font-size: 24px;
+        }
+        .elevencontainer {
+            height: 680px;
+            background-color: #EFEFEF;
+        }
+        .bottom {
+            height: 237px;
+            background-color: #fff;
+            position: relative;
+        }
+        .bottom img {
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+        }
+        .bottom .information {
+            position: absolute;
+            top: 60px;
+            left: 200px;
+            height: 100px;
+            width: 700px;
+            font-size: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="11.css">
+
+</head>
+
+<body>
+    <div class="muban w">
+        <div class="header w">
+            <img src="https://liuzeqi001.oss-cn-beijing.aliyuncs.com/IMG_2954(20240220-103719)%202%20(1).png" />
+            <span class="text"><strong>云顶书院学生管理系统</strong></span>
+            <div>学生端</div>
+            <ul>
+                <li>首页</li>
+                <li>学生信息</li>
+                <li style="background: linear-gradient(to bottom,#DEDDDD,#FBFAFA);">学生留言</li>
+                <li>常见问题</li>
+            </ul>
+        </div>
+        <div class="elevencontainer w">
+            <div class="elevenBodyHead">
+                <strong>查询：</strong><input class="checkteacher" value="教师账号">
+            </div>
+            <div class="elevenBodyComment">
+                <div class="retype"><strong>事务类型：</strong><input class="requestType"></div>
+                <div class="retext"><strong>留言：</strong></div><textarea name="TEXT" id="" cols="30" rows="10" class="studentTextarea"></textarea>
+            </div>
+            <div class="elevenBodyButton">
+                <button class="buttonText"><strong>发送</strong></button>
+            </div>
+        </div>
+        <div class="bottom w">
+            <img src="https://liuzeqi001.oss-cn-beijing.aliyuncs.com/IMG_2954(20240220-103719)%202%20(1).png"
+                style="left:23px;">
+            <img src="https://liuzeqi001.oss-cn-beijing.aliyuncs.com/Rectangle%2077.png" class="pic1"
+                style="right: 200px;">
+            <img src="https://liuzeqi001.oss-cn-beijing.aliyuncs.com/Rectangle%2078.png" class="pic2"
+                style="right: 358px;">
+            <div class="information">
+                <strong>联系电话： 123 3456 4567</strong> &nbsp; | &nbsp; <strong>邮箱：12334563456@qq.com</strong> <br />
+                <br />
+                <strong>地址：太原理工大学明向校区</strong>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="11.js"></script>
+</body>
+
+</html>
