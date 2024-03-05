@@ -83,11 +83,12 @@
             <span class="text"><strong>云顶书院学生管理系统</strong></span>
         </div>
         <div class="fourcontainer w">
-            <div style="position: absolute; font-size: 77px; top: 40px; left: 544px;">登录：</div>
+            <div style="position: absolute; font-size: 77px; top: 40px; left: 544px;">注册：</div>
             <div class="ID">
                 <ul>
                     <li>账号:<input type="text" value="工号/学号" class="id"></li>
-                    <li style="top: 350px;">密码:<input type="text" value="密码" class="pass"></li>
+                    <li style="top: 270px;">密码:<input type="text" value="密码" class="pass"></li>
+                    <li style="top: 376px;">密码:<input type="text" value="再次输入" class="passagain"></li>
                 </ul>
             </div>
 
@@ -99,19 +100,17 @@
                 <ul>
                     <li>
                         <div><img
-                                src="https://peirunhan.oss-cn-beijing.aliyuncs.com/icon_%E6%89%8B%E6%9C%BA%E5%8F%B7_%E7%99%BB%E5%BD%95.png">
-                        </div>手机号登录
+                                src="https://peirunhan.oss-cn-beijing.aliyuncs.com/%E8%BF%94%E5%9B%9E.png">
+                        </div>返回
                     </li>
                     <li>
-                        <div><img src="https://peirunhan.oss-cn-beijing.aliyuncs.com/%E4%B8%AA%E4%BA%BA.png "
-                                style="left:282px;"></div>其他方式
+                        <div><img src="https://peirunhan.oss-cn-beijing.aliyuncs.com/icon_%E6%89%8B%E6%9C%BA%E5%8F%B7_%E7%99%BB%E5%BD%95.png"
+                                style="left:282px;"></div>手机注册
                     </li>
-                    <a href="注册(管理).html" target="_blank">
-                        <li>
-                            <div><img src="https://peirunhan.oss-cn-beijing.aliyuncs.com/%E5%8A%A0%E5%8F%B7%20(1).png"
-                                    style="left: 546px;"></div>注册
-                        </li>
-                    </a>
+                    <li>
+                        <div><img src="https://peirunhan.oss-cn-beijing.aliyuncs.com/%E6%9B%B4%E5%A4%9A.png"
+                                style="left: 546px;"></div>更多
+                    </li>
                 </ul>
             </div>
 
@@ -132,51 +131,77 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
     <script src="https://cdn.bootcdn.net/ajax/libs/qs/6.11.2/qs.js"></script>
-    <script>
-        var id = document.querySelector('.id');
-        var pass = document.querySelector('.pass');
-        var btn = document.querySelector('button')
-        id.onfocus = function () {
-            if (id.value == '工号/学号') {
-                id.value = '';
+    <script >
+        var id=document.querySelector('.id');
+        var pass=document.querySelector('.pass');
+        var passagain=document.querySelector('.passagain');
+        var btn=document.querySelector('button');
+        
+        function Checkpass(str){
+            var reg = /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[`~!@#$%^&*()_+<>?:"{},.\/\\;'[\]]).*$/;
+            if(reg.test(str)){
+                
             }
-
-        }
-        id.onblur = function () {
-            if (!id.value) {
-                id.value = '工号/学号'
-            }
-        }
-        pass.onfocus = function () {
-            if (pass.value == '密码') {
-                pass.value = '';
-                pass.type = 'password';
-            }
-
-        }
-        pass.onblur = function () {
-            if (!pass.value) {
-                pass.type = 'text';
-                pass.value = '密码';
+            else{
+                alert('密码格式错误，请重新输入');
             }
         }
-        btn.onclick = function () {
-            if (id.value == '工号/学号' || pass.value == '密码') {
-                alert('账号或密码格式错误');
+        id.onfocus=function(){
+            if(id.value=='工号/学号'){
+                id.value='';
             }
-            else {
-                let data = {
-                    "name": id.value,
-                    "password": pass.value
+            
+        }
+        id.onblur=function(){
+            if(!id.value){
+                id.value='工号/学号'
+            }
+            alert('密码最少六位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符');
+        }
+        pass.onfocus = function(){
+            if(pass.value=='密码'){
+                pass.value= '';
+                pass.type='password';
+            }
+            
+        }
+        pass.onblur = function(){
+            if(!pass.value){
+                pass.type='text';
+                pass.value='密码';
+            }
+            else{
+                Checkpass(pass.value);
+            }
+        }
+        passagain.onfocus = function () {
+                if (passagain.value == '再次输入') {
+                    passagain.value = '';
+                    passagain.type = 'password';
                 }
-                axios.post('http://192.168.148.13:9000/start2', Qs.stringify(data))
-                    .then((res) => {
-                        if (res.data == 'yes') {
-                            alert('登录成功')
-                        }
-                        else {
-                            alert('账号或密码错误')
-                        }
+            }
+        passagain.onblur = function () {
+                if (!passagain.value) {
+                    passagain.type = 'text';
+                    passagain.value = '再次输入';
+                }
+                else if(passagain.value!=pass.value){
+                    alert('两次密码不同，请重新输入');
+                }
+            }
+        btn.onclick=function(){
+            if(id.value=='工号/学号'||pass.value=='密码'||passagain.value=='再次输入'){
+                alert('账号或密码不符合规范');
+            }
+            else{
+                
+                let data={
+                    "name":id.value,
+                    "password":pass.value
+                }
+                axios.post('http://192.168.148.13:9000/start',Qs.stringify(data))
+                    .then((res)=>{
+                        console.log(res);
                     })
             }
         }
