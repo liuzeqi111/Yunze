@@ -4,12 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="8.css">
-    <title>第八页</title>
+    <title>云顶书院学生管理系统</title>
     <style>
         * {
             margin: 0;
             padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        ul {
+            list-style: none;
         }
 
         .w {
@@ -17,7 +23,7 @@
             margin: auto;
         }
 
-        .eight {
+        .muban {
             height: 1084px;
             display: flex;
             flex-direction: column;
@@ -30,7 +36,7 @@
             background-color: #fff;
         }
 
-        .eight .header img {
+        .header img {
             position: absolute;
             top: 50%;
             margin-top: -50px;
@@ -44,7 +50,6 @@
             left: 160px;
             font-size: 24px;
         }
-
         .header div {
             position: absolute;
             width: 161px;
@@ -58,17 +63,11 @@
             top: 25%;
             left: 450px;
         }
-
         .header ul {
             display: flex;
             position: absolute;
             right: 20px;
         }
-
-        .header ul :hover {
-            background: linear-gradient(to bottom,#DEDDDD,#FBFAFA)
-        }
-
         .header ul li {
             font-weight: 700;
             display: block;
@@ -80,20 +79,24 @@
             line-height: 167px;
             font-size: 24px;
         }
-
+        .header ul li:hover{
+            cursor: pointer;
+            background: linear-gradient(to bottom,#DEDDDD,#FBFAFA);}
+        .elevencontainer {
+            height: 680px;
+            background-color: #EFEFEF;
+        }
         .bottom {
             height: 237px;
             background-color: #fff;
             position: relative;
         }
-
-        .eight .bottom img {
+        .bottom img {
             position: absolute;
             top: 50%;
             margin-top: -50px;
         }
-
-        .eight .bottom .information {
+        .bottom .information {
             position: absolute;
             top: 60px;
             left: 200px;
@@ -102,39 +105,33 @@
             font-size: 20px;
         }
     </style>
+    <link rel="stylesheet" href="11管理端.css">
 
 </head>
 
 <body>
-    <div class="eight w">
+    <div class="muban w">
         <div class="header w">
             <img src="https://liuzeqi001.oss-cn-beijing.aliyuncs.com/IMG_2954(20240220-103719)%202%20(1).png" />
             <span class="text"><strong>云顶书院学生管理系统</strong></span>
             <div>管理端</div>
             <ul>
-                <li>首页</li>
-                <li>学生信息</li>
-                <li>学生留言</li>
-                <li>常见问题</li>
+                <a href="../刘泽琦/HTML/管理端首页.html"><li>首页</li></a>
+                <a href="../鲍若康/学生信息-管理端--7.html"><li>学生信息</li></a>
+                <li style="background: linear-gradient(to bottom,#DEDDDD,#FBFAFA);">学生留言</li>
+                <a class="question"><li>常见问题</li></a>
             </ul>
         </div>
-        <div class="container w">
-            <input type="text" id="ll">
-            <input type="button" value="显示" id="ubub">
-            <div class="high">
-                <div>姓名: <input type="text" size="10" id="user">&nbsp;&nbsp;&nbsp;
-                    年龄: <input type="text" size="10" id="age">&nbsp;&nbsp;&nbsp;</div>
-                <div>专业: <input type="text" size="10" id="career">&nbsp;&nbsp;&nbsp;
-                    职位: <input type="text" size="10" id="date">&nbsp;&nbsp;&nbsp;</div>
-                <div>学号: <input type="text" size="10" id="id">&nbsp;&nbsp;&nbsp;
-                    方向: <input type="text" size="10" id="direction">&nbsp;&nbsp;&nbsp;</div>
+        <div class="elevencontainer w">
+            <div class="elevenBodyComment">
+                <div class="ctS">
+                    <strong>学生学号：</strong><input class="checkteacherS">
+                </div>
+                <div class="retype"><strong>事务类型：</strong><input class="requestType"></div>
+                <div class="retext"><strong>留言：</strong></div><textarea name="TEXT" id="" cols="30" rows="10" class="studentTextarea"></textarea>
             </div>
-            <div class="low">
-                获奖经历: <input type="text" size="31" id="award">
-            </div>
-            <div class="btn">
-                <a href="9.html" target="_self" id="mes_new">信息修改</a>
-                <a href="#" target="_self" id="pwd_new">重置密码</a>
+            <div class="elevenBodyButton">
+                <button class="buttonText"><strong>查询</strong></button>
             </div>
         </div>
         <div class="bottom w">
@@ -151,6 +148,9 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="11管理端.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/qs/6.11.2/qs.js"></script>
 </body>
-<script type="text/javascript" src="8.js"></script>
+
 </html>

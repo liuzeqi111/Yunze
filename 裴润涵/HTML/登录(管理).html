@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../fourcontainer.css">
-    <title>Document</title>
+    <title>云顶书院学生管理系统</title>
 </head>
 <style>
     * {
@@ -87,7 +87,7 @@
             <div class="ID">
                 <ul>
                     <li>账号:<input type="text" value="工号/学号" class="id"></li>
-                    <li style="top: 350px;">密码:<input type="text" value="密码" class="pass"></li>
+                    <li style="top: 350px;">密码:<input type="text" value="密码" class="pass"><img src="https://peirunhan.oss-cn-beijing.aliyuncs.com/%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%AF%86%E7%A0%81.png" class="show"></li>
                 </ul>
             </div>
 
@@ -136,6 +136,7 @@
         var id = document.querySelector('.id');
         var pass = document.querySelector('.pass');
         var btn = document.querySelector('button')
+        var show=document.querySelector('.show')
         id.onfocus = function () {
             if (id.value == '工号/学号') {
                 id.value = '';
@@ -155,11 +156,13 @@
 
         }
         pass.onblur = function () {
+            
             if (!pass.value) {
                 pass.type = 'text';
                 pass.value = '密码';
             }
         }
+        
         btn.onclick = function () {
             if (id.value == '工号/学号' || pass.value == '密码') {
                 alert('账号或密码格式错误');
@@ -169,10 +172,11 @@
                     "name": id.value,
                     "password": pass.value
                 }
-                axios.post('http://192.168.148.13:9000/start2', Qs.stringify(data))
+                axios.post('http://127.0.0.1:9000/start2', Qs.stringify(data))
                     .then((res) => {
                         if (res.data == 'yes') {
-                            alert('登录成功')
+                            alert('欢迎使用')
+                            location.assign('http://127.0.0.1:5500/Yunze/%E5%88%98%E6%B3%BD%E7%90%A6/HTML/%E7%AE%A1%E7%90%86%E7%AB%AF%E9%A6%96%E9%A1%B5.html')
                         }
                         else {
                             alert('账号或密码错误')

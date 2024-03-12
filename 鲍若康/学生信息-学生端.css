@@ -1,7 +1,7 @@
 * {
     margin: auto;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace;  */
 }
 
 .inner {
@@ -51,7 +51,7 @@ td {
     white-space: nowrap;
 }
 
-.award {
+#award {
     position: absolute;
     top: 300px;
     left: 142px;
