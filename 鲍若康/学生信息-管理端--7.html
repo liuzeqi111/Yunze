@@ -4,12 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="学生信息-管理端.css">
+    <title>云顶书院学生管理系统</title>
+    
+    <link rel="stylesheet" href="../sweetalert2.min.css">
+    <script src="../sweetalert2.min.js"></script>
     <style>
 * {
         margin: 0;
         padding: 0;
+    }
+    a{
+        text-decoration: none;
+        color: #000;
     }
     ul{
         list-style: none;
@@ -76,7 +82,7 @@
         font-size: 24px;
     }
     .header ul li:hover{
-         cursor: pointer;
+        cursor: pointer;
         background: linear-gradient(to bottom,#DEDDDD,#FBFAFA);
     }
     .sevencontainer {
@@ -106,7 +112,9 @@
     }
 
     </style>
+    <link rel="stylesheet" type="text/css" href="学生信息-管理端.css">
     <script src="echarts.min.js"></script>
+    
 </head>
 
 <body>
@@ -116,10 +124,10 @@
         <span class="text"><strong>云顶书院学生管理系统</strong></span>
         <div>管理端</div>
         <ul>
-            <li>首页</li>
+            <a href="../刘泽琦/HTML/管理端首页.html"><li>首页</li></a>
             <li style="background: linear-gradient(to bottom,#DEDDDD,#FBFAFA);">学生信息</li>
-            <li>学生留言</li>
-            <li>常见问题</li>
+            <a href="../郭锦彪/学生留言-管理端(1).html"><li>学生留言</li></a>
+            <a class="question"><li>常见问题</li></a>
         </ul>
     </div>
     <div class="sevencontainer w">
@@ -134,7 +142,7 @@
         <span>搜索：</span>
         <input type="text" id="search" />
     </div>
-    <button>确认</button>
+    <button class="button">确认</button>
     <div class="index"></div>
     <div id="main" style="width: 297px;height:300px;"></div>
 
@@ -155,10 +163,8 @@
 
 
 
-  
-    <script type="text/javascript">
-
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/qs/6.11.2/qs.js"></script>
     <script src="学生信息-管理端.js"></script>
 
 

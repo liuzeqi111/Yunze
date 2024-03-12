@@ -4,18 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="学生信息-学生端.css">
+    <title>云顶书院学生管理系统</title> 
+    <link rel="stylesheet" href="../sweetalert2.min.css">
+    <script src="../sweetalert2.min.js"></script>
     <style>
 * {
         margin: auto;
         padding: 0;
     }
+    a{
+        text-decoration: none;
+        color: #000;
+    }
     ul{
         list-style: none;
     }
-   .header ul li:hover{
-         cursor: pointer;
+    .header ul li:hover{
+        cursor: pointer;
         background: linear-gradient(to bottom,#DEDDDD,#FBFAFA);
     }
     .w {
@@ -105,6 +110,7 @@
         font-size: 20px;
     }
     </style>
+    <link rel="stylesheet" type="text/css" href="学生信息-学生端.css">
 </head>
 
 <body>
@@ -114,10 +120,10 @@
             <span class="text"><strong>云顶书院学生管理系统</strong></span>
             <div>学生端</div>
             <ul>
-                <li>首页</li>
+                <a href="../刘泽琦/HTML/学生端首页.html"><li>首页</li></a>
                 <li style="background: linear-gradient(to bottom,#DEDDDD,#FBFAFA);">学生信息</li>
-                <li>学生留言</li>
-                <li>常见问题</li>
+                <a href="../郭锦彪/学生留言-学生端.html"><li>学生留言</li></a>
+                <a class="question"><li>常见问题</li></a>
             </ul>
         </div>
         <div class="sixcontainer w">
@@ -128,7 +134,7 @@
                 <tr>
                     <td>
                         <b>姓名：</b>
-                        <input type="text" id="username" />
+                        <input type="text" id="name" />
                     </td>
                     <td>
                         <b>年龄：</b>
@@ -152,17 +158,18 @@
                     </td>
                     <td>
                         <b>方向：</b>
-                        <select>
+                        <select id="direction">
                             <option>开发</option>
                             <option>设计</option>
                             <option>秘书处</option>
                         </select>
+                        <!-- <input type="text" id="direction"> -->
                     </td>
                 </tr>
             </table>
             <div class="award-hint"><b>获奖<br>经历：</b></div>
-            <div class="award">
-                <textarea cols="43" rows="8" placeholder="（100字以内）"></textarea>
+            <div >
+                <textarea cols="33" rows="5" placeholder="（100字以内）" id="award"></textarea>
             </div>
     
             <div class="button">
@@ -188,7 +195,8 @@
 
 
 
- 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/qs/6.11.2/qs.js"></script>
     <script src="学生信息-学生端.js"> </script>
 </body>
 

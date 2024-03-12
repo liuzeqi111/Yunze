@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../fourcontainer.css">
-    <title>Document</title>
+    <title>云顶书院学生管理系统</title>
 </head>
 <style>
     *{
@@ -139,10 +139,11 @@
                         "name": id.value,
                         "password": pass.value
                     }
-                    axios.post('http://192.168.34.223:9000/start1', Qs.stringify(data))
+                    axios.post('http://127.0.0.1:9000/start1', Qs.stringify(data))
                     .then((res)=>{
                         if(res.data=='yes'){
-                            alert('登录成功')
+                            alert('欢迎使用')
+                            window.open('../../刘泽琦/HTML/学生端首页.html')
                         }
                         else{
                             alert('账号或密码错误')

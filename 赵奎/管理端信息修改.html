@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="9.css">
+    <link rel="stylesheet" href="../sweetalert2.min.css">
+    <script src="../sweetalert2.min.js"></script>
+    <title>云顶书院学生管理系统</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-weight: 700;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        .w {
+            width: 1916px;
+            margin: auto;
+        }
+
+        .nine {
+            height: 1084px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .header {
+            position: relative;
+            height: 167px;
+            background-color: #fff;
+        }
+        
+        .header img {
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+            left: 23px;
+        }
+
+        .header span {
+            position: absolute;
+            top: 50%;
+            margin-top: -12px;
+            left: 160px;
+            font-size: 24px;
+        }
+
+        .header div {
+            position: absolute;
+            width: 161px;
+            height: 75px;
+            background-color: #E3E3E3;
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            line-height: 75px;
+            border-radius: 75px;
+            top: 25%;
+            left: 450px;
+        }
+
+        .header ul {
+            display: flex;
+            position: absolute;
+            right: 20px;
+            transition: 0.5s;
+        }
+
+        .header ul :hover {
+            background: linear-gradient(to bottom,#DEDDDD,#FBFAFA)
+        }
+
+        .header ul li {
+            font-weight: 700;
+            display: block;
+            width: 118px;
+            height: 167px;
+            background-color: #fff;
+            text-align: center;
+            margin-left: 10px;
+            line-height: 167px;
+            font-size: 24px;
+            transition: 0.5s;
+        }
+
+        .bottom {
+            height: 237px;
+            background-color: #fff;
+            position: relative;
+        }
+
+        .nine .bottom img {
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+        }
+
+        .nine .bottom .information {
+            position: absolute;
+            top: 60px;
+            left: 200px;
+            height: 100px;
+            width: 700px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nine w">
+        <div class="header w">
+            <img src="https://liuzeqi001.oss-cn-beijing.aliyuncs.com/IMG_2954(20240220-103719)%202%20(1).png" />
+            <span class="text"><strong>云顶书院学生管理系统</strong></span>
+            <div>管理端</div>
+            <ul>
+                <a href="../刘泽琦/HTML/管理端首页.html"><li>首页</li></a>
+                <a href="../鲍若康/学生信息-管理端--7.html"><li style="background: linear-gradient(to bottom,#DEDDDD,#FBFAFA);">学生信息</li></a>
+                <a href="../郭锦彪/学生留言-管理端(1).html"><li>学生留言</li></a>
+                <a class="question"><li>常见问题</li></a>
+            </ul>
+        </div>
+        <div class="container w">
+            <!-- <input type="text" id="ll">
+            <input type="button" value="显示" id="ubub"> -->
+            <div class="word1"><strong>信息修改</strong></div>
+            <div class="high">
+                <div>姓名: <input type="text" size="10" id="name">&nbsp;&nbsp;&nbsp;
+                    年龄: <input type="text" size="10" id="age">&nbsp;&nbsp;&nbsp;</div>
+                <div>专业: <input type="text" size="10" id="major">&nbsp;&nbsp;&nbsp;
+                    职位: <input type="text" size="10" id="position">&nbsp;&nbsp;&nbsp;</div>
+                <div>学号: <input type="text" size="10" id="id">&nbsp;&nbsp;&nbsp;
+                    方向: <select id="direction">
+                        <option>开发</option>
+                        <option>设计</option>
+                        <option>秘书处</option>
+                    </select>&nbsp;&nbsp;&nbsp;</div>
+            </div>
+            <div class="low">
+                <div class="box">获奖<br>经历:&nbsp</div>
+                <input type="text" size="35" id="award">
+            </div>
+            <div class="btn">
+                <!-- <a href="http://127.0.0.1:5500/8.html" target="_self" id="cancel">取消</a> -->
+                <!-- <div class="box"><input type="button" value="确定" id="qwqw"></div> -->
+                <a id="qwqw">确定</a>
+            </div>
+        </div>
+        <div class="bottom w">
+            <img src="https://liuzeqi001.oss-cn-beijing.aliyuncs.com/IMG_2954(20240220-103719)%202%20(1).png"
+                style="left:23px;">
+            <img src="https://liuzeqi001.oss-cn-beijing.aliyuncs.com/Rectangle%2077.png" class="pic1"
+                style="right: 200px;">
+            <img src="https://liuzeqi001.oss-cn-beijing.aliyuncs.com/Rectangle%2078.png" class="pic2"
+                style="right: 358px;">
+            <div class="information">
+                <strong>联系电话： 123 3456 4567</strong> &nbsp; | &nbsp; <strong>邮箱：12334563456@qq.com</strong> <br />
+                <br />
+                <strong>地址：太原理工大学明向校区</strong>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
+<script src="https://cdn.bootcdn.net/ajax/libs/qs/6.11.2/qs.js"></script>
+<script type="text/javascript" src="9.js"></script>
+</html>
