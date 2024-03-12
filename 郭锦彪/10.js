@@ -12,13 +12,25 @@ tenInputPassword.onblur = function () {
         tenInputPassword.style.color = '#CCCCCC'
     }
 }
+var pare = window.opener
+var id = pare.document.getElementById('id')
+
 tenTrue.onclick = function () {
     if (tenInputPassword.value !== '' && tenInputPassword.value !== '6-14位') {
-        var reg = /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
+        var reg = /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[`~!@#$%^&*()_+<>?:"{},.\/\\;'[\]]).*$/;
         var result = reg.test(tenInputPassword.value)
         if (result) {
             //修改密码
-            alert("成功")
+            let data = {
+                'name': id.value,
+                'password':tenInputPassword.value
+            }
+            axios.post('http://127.0.0.1:9000/mima1',Qs.stringify(data))
+                .then((res) => {
+                    if (res.data == 'yes') {
+                    alert('密码重置完成')
+                }
+            })
         } else {
             tenInputPassword.value = ""
             alert("失败")

@@ -23,6 +23,7 @@
     font-weight: 700;
     margin-left: 28px;
     color: #BABABA;
+    outline: none;
 }
 .fourcontainer .photo ul{
     position: absolute;
