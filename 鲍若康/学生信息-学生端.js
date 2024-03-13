@@ -10,7 +10,15 @@ var award = document.getElementById('award')
 
 var question = document.querySelector('.question')
 question.onclick = () => {
-    alert('功能还在开发中......')
+    //alert('功能还在开发中......')
+    //Swal.fire('功能还在开发中......');
+    Swal.fire({
+                  position: "center",
+                    icon: "info",
+                    title: '功能还在开发中......',
+                    showConfirmButton: false,
+             timer: 700,
+                        });
 }
 // function fun() {
 //     axios.post('http://127.0.0.1:9000/search', Qs.stringify(data))
@@ -48,7 +56,14 @@ var admit = document.querySelector('.admit');
 // }
 //信息更改
     change.onclick=function(){
-        alert('功能暂时无法使用')
+       // alert('功能暂时无法使用')
+         Swal.fire({
+                  position: "center",
+                    icon: "info",
+                    title: '功能暂时无法使用',
+                    showConfirmButton: false,
+             timer: 700,
+                        });
 }
    //提交信息
 admit.onclick = function () {
@@ -65,7 +80,14 @@ let data = {
         .then((res) => {
             if (res.data == 'yes') {
                 console.log(res.data)
-                alert("注册成功")
+                //alert("注册成功")
+                 Swal.fire({
+                  position: "center",
+                    icon: "success",
+                    title: "注册成功",
+                    showConfirmButton: false,
+                    timer: 1000
+                        });
                 setTimeout(location.assign('../裴润涵/HTML/登录(学生).html'),300)
             }
             

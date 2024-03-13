@@ -12,7 +12,15 @@
 // let cancel = document.getElementById('cancel');
 var question = document.querySelector('.question')
 question.onclick = () => {
-    alert('功能还在开发中......')
+   // alert('功能还在开发中......')
+    //Swal.fire('功能还在开发中......');
+    Swal.fire({
+                  position: "center",
+                    icon: "info",
+                    title: '功能还在开发中......',
+                    showConfirmButton: false,
+             timer: 700,
+                        });
 }
 let qwqw = document.getElementById('qwqw');
 var names = document.getElementById('name')
@@ -36,7 +44,14 @@ let data = {
         .then((res) => {
             if (res.data == 'yes') {
                 console.log(res.data)
-                alert("信息修改成功")
+                // alert("信息修改成功")
+                Swal.fire({
+                  position: "center",
+                    icon: "success",
+                    title: "信息修改成功",
+                    showConfirmButton: false,
+                    timer: 1000
+                        });
             }
             
     })

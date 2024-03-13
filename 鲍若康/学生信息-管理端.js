@@ -58,12 +58,12 @@ function num() {
             }
         ]
             };
-            myChart.setOption(option);
+           myChart.setOption(option);
     })
 }
 num()
     // 使用刚指定的配置项和数据显示图表。
-    
+     
     
     var search=document.getElementById('search');
     var button=document.querySelector('button');
@@ -71,12 +71,26 @@ var index = document.querySelector('.index')
 //搜索
 var question = document.querySelector('.question')
 question.onclick = () => {
-    alert('功能还在开发中......')
+    // alert('功能还在开发中......')
+    // Swal.fire('功能还在开发中......');
+    Swal.fire({
+                  position: "center",
+                    icon: "info",
+                    title: '功能还在开发中......',
+                    showConfirmButton: false,
+             timer: 700,
+                        });
 }
-        
 button.onclick = function () {
     if (search.value == '') {
-        alert('输入内容错误')
+       // alert('输入内容错误')
+      Swal.fire({
+                  position: "center",
+                    icon: "info",
+                    title: '输入内容错误',
+                    showConfirmButton: false,
+             timer: 700,
+                        });
     }
     else {
         let data = {

@@ -13,7 +13,15 @@
         // let ll = document.getElementById('ll');
 var question = document.querySelector('.question')
 question.onclick = () => {
-    alert('功能还在开发中......')
+   // alert('功能还在开发中......')
+    //Swal.fire('功能还在开发中......');
+    Swal.fire({
+                  position: "center",
+                    icon: "info",
+                    title: '功能还在开发中......',
+                    showConfirmButton: false,
+             timer: 700,
+                        });
 }
 var pare = window.opener
 var six = pare.document.getElementById("search")
