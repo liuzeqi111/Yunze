@@ -1,7 +1,8 @@
 var checkteacherS = document.querySelector(".checkteacherS")
 var question = document.querySelector('.question')
 question.onclick = () => {
-    alert('功能还在开发中......')
+    // alert('功能还在开发中......')
+    Swal.fire("功能还在开发中......");
 }
 var buttonSent = document.querySelector(".buttonText") //发送
 var inputType = document.querySelector(".requestType") //事务类型
@@ -9,7 +10,13 @@ var inputText = document.querySelector(".studentTextarea") //留言
 //发送按钮
 buttonSent.onclick = function () {
     if (checkteacherS.value === '' || checkteacherS.value === "教师账号") {
-        alert("发送失败，请输入完整")
+        // alert("发送失败，请输入完整")
+        Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "发送失败，请输入完整",
+                    // footer: '<a href="#">Why do I have this issue?</a>'
+                });
     } else {
         //发送请求模块
         let data = {

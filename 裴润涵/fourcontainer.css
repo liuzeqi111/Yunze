@@ -15,14 +15,6 @@
     left: 662px;
     padding-bottom: 15px;
 }
-.fourcontainer .ID ul li img{
-    position: absolute;
-    top:22px;
-    left: 561px;
-    height: 50px;
-    display: none;
-    z-index: 100;
-}
 .fourcontainer .ID ul li input{
     height: 50px;
     width: 467px;

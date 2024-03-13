@@ -5,7 +5,8 @@ var inputText = document.querySelector(".studentTextarea") //留言
 //查询框设置
 var question = document.querySelector('.question')
 question.onclick = () => {
-    alert('功能还在开发中......')
+    // alert('功能还在开发中......')
+    Swal.fire("功能还在开发中......");
 }
 checkteacher.onclick = function () {
     if (checkteacher.value === "教师账号") {
@@ -30,7 +31,13 @@ var pare = window.opener;
 var id = pare.document.querySelector('.id')
 buttonSent.onclick = function () {
     if (checkteacher.value === '' || inputType.value === '' || inputText.value === '' || checkteacher.value === "教师账号") {
-        alert("发送失败，请输入完整")
+        // alert("发送失败，请输入完整")
+        Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "发送失败，请输入完整",
+                    // footer: '<a href="#">Why do I have this issue?</a>'
+                });
     } else {
         //发送请求模块
         let data = {
@@ -42,7 +49,14 @@ buttonSent.onclick = function () {
         axios.post('http://127.0.0.1:9000/fa', Qs.stringify(data))
             .then((res) => {
                 if (res.data == 'yes') {
-                alert('留言已发送')
+                    // alert('留言已发送')
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "留言已发送",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
             }
         })
     }

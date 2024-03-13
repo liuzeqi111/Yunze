@@ -8,7 +8,9 @@ window.addEventListener('load', function () {
     var num = 0;
 var question = document.querySelector('.question')
 question.onclick = () => {
-    alert('功能还在开发中......')
+    // alert('功能还在开发中......')
+    // 弹窗1
+    Swal.fire("功能还在开发中......");
 }
     focus.addEventListener('mouseenter', function () {
         btn_l.style.display = 'block';
@@ -86,7 +88,3 @@ question.onclick = () => {
 })
 var pare = window.opener;
 var id = pare.document.querySelector('.id')
-// var box1=document.querySelector('.box1')
-// box1.onclick = ()=>{
-//     location.assign('../../鲍若康/学生信息-学生端--6.html')
-// }

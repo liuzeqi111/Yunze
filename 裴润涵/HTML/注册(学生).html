@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../fourcontainer.css">
+    <script src="../../刘泽琦/JS/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="../../刘泽琦/CSS/sweetalert2.min.css">
     <title>云顶书院学生管理系统</title>
 </head>
 <style>
@@ -143,7 +145,13 @@
                 
             }
             else{
-                alert('密码格式错误，请重新输入');
+                // alert('密码格式错误，请重新输入');
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "密码格式错误，请重新输入",
+                    // footer: '<a href="#">Why do I have this issue?</a>'
+                });
             }
         }
         id.onfocus=function(){
@@ -156,7 +164,24 @@
             if(!id.value){
                 id.value='工号/学号'
             }
-            alert('密码最少六位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符');
+            // alert('密码最少六位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符');
+            Swal.fire({
+                title: "密码最少六位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符",
+                showClass: {
+                    popup: `
+                        animate__animated
+                        animate__fadeInUp
+                        animate__faster
+                        `
+                },
+                hideClass: {
+                    popup: `
+                        animate__animated
+                        animate__fadeOutDown
+                        animate__faster
+                    `
+                }
+            });
         }
         pass.onfocus = function(){
             if(pass.value=='密码'){
@@ -186,12 +211,24 @@
                     passagain.value = '再次输入';
                 }
                 else if(passagain.value!=pass.value){
-                    alert('两次密码不同，请重新输入');
+                    // alert('两次密码不同，请重新输入');
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "两次密码不同，请重新输入",
+                        // footer: '<a href="#">Why do I have this issue?</a>'
+                    });
                 }
             }
         btn.onclick=function(){
             if(id.value=='工号/学号'||pass.value=='密码'||passagain.value=='再次输入'){
-                alert('账号或密码不符合规范');
+                // alert('账号或密码不符合规范');
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "账号或密码不符合规范",
+                    // footer: '<a href="#">Why do I have this issue?</a>'
+                });
             }
             else{
                 

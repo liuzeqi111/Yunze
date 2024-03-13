@@ -28,14 +28,22 @@ tenTrue.onclick = function () {
             axios.post('http://127.0.0.1:9000/mima1',Qs.stringify(data))
                 .then((res) => {
                     if (res.data == 'yes') {
-                    alert('密码重置完成')
+                        // alert('密码重置完成')
+                        Swal.fire("密码重置完成");
                 }
             })
         } else {
             tenInputPassword.value = ""
-            alert("失败")
+            // alert("失败")
+            Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "失败",
+                    // footer: '<a href="#">Why do I have this issue?</a>'
+                });
         }
     } else {
-        alert("请输入密码")
+        // alert("请输入密码")
+        Swal.fire("请输入密码");
     }
 }
