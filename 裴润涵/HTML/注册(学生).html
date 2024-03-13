@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../fourcontainer.css">
-    <title>Document</title>
+    <title>云顶书院学生管理系统</title>
 </head>
 <style>
     * {
@@ -199,9 +199,13 @@
                     "name":id.value,
                     "password":pass.value
                 }
-                axios.post('http://192.168.148.13:9000/start',Qs.stringify(data))
+                axios.post('http://127.0.0.1:9000/zhuce1',Qs.stringify(data))
                     .then((res)=>{
-                        console.log(res);
+                        if(res.data==='yes'){
+                            console.log(res);
+                            location.assign('http://127.0.0.1:5500/Yunze/%E9%B2%8D%E8%8B%A5%E5%BA%B7/%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF-%E5%AD%A6%E7%94%9F%E7%AB%AF--6.html')
+                        }
+                        
                     })
             }
         }

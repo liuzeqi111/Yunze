@@ -6,7 +6,10 @@ window.addEventListener('load', function () {
     var ul = document.querySelector('.img');
     var ol = document.querySelector('.circle');
     var num = 0;
-
+var question = document.querySelector('.question')
+question.onclick = () => {
+    alert('功能还在开发中......')
+}
     focus.addEventListener('mouseenter', function () {
         btn_l.style.display = 'block';
         btn_r.style.display = 'block';
@@ -81,3 +84,9 @@ window.addEventListener('load', function () {
         btn_r.click();
     }, 2000);
 })
+var pare = window.opener;
+var id = pare.document.querySelector('.id')
+// var box1=document.querySelector('.box1')
+// box1.onclick = ()=>{
+//     location.assign('../../鲍若康/学生信息-学生端--6.html')
+// }

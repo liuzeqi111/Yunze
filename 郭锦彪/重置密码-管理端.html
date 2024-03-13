@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>云顶书院学生管理系统</title>
     <style>
     * {
         margin: 0;
@@ -74,6 +74,10 @@
         line-height: 167px;
         font-size: 24px;
     }
+    .header ul li:hover{    
+        cursor: pointer;    
+        background: linear-gradient(to bottom,#DEDDDD,#FBFAFA);
+    }
     .fourcontainer {
         height: 680px;
         background-color: #EFEFEF;
@@ -124,7 +128,7 @@
                     密码：<input placeholder="6-14位" class="tenInputPassword">
                 </div>
                 <div class="passwordNotice">
-                    必须包含字母,数字，或符号中至少两项，不可以有空格
+                    必须包含大小写字母,数字和特殊符号，不可以有空格，至少六位
                 </div>
                 <div class="tenBodyButton">
                     <button class="tenTrue">确认</button>
@@ -142,6 +146,8 @@
                 </div>
             </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/qs/6.11.2/qs.js"></script>
         <script type="text/javascript" src="10.js"></script>
 </body>
 

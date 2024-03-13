@@ -22,18 +22,21 @@
         }
 
         .high input {
-            margin-top: 20px;
+            margin-top: 10px;
             padding: 2px;
         }
 
         .low {
+            width: 375px;
             margin-left: 40%;
-            margin-top: 40px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-start;
         }
-
+        
         .low input {
             padding-top: 0;
-            padding-bottom: 60px;
+            padding-bottom: 70px;
         }
         
         .btn {
@@ -45,8 +48,7 @@
             justify-content: space-around;
         }
 
-        .btn a ,
-        .btn .box{
+        .btn a{
             width: 150px;
             height: 76px;
             line-height: 76px;
@@ -62,4 +64,7 @@
         .btn :hover {
             background-color: #999;
         }
-        
+        select {
+            height: 25px;
+            width: 110px;
+        }
